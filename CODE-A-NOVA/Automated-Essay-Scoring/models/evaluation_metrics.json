@@ -1,0 +1,25 @@
+{
+    "best_model": "Gradient Boosting Regressor",
+    "models_evaluated": {
+        "Ridge Regression": {
+            "MAE": 1.0934,
+            "RMSE": 1.4048,
+            "R2_Score": 0.5743,
+            "QWK": 0.7123
+        },
+        "Random Forest Regressor": {
+            "MAE": 1.0281,
+            "RMSE": 1.3568,
+            "R2_Score": 0.6029,
+            "QWK": 0.7349
+        },
+        "Gradient Boosting Regressor": {
+            "MAE": 1.0112,
+            "RMSE": 1.3126,
+            "R2_Score": 0.6283,
+            "QWK": 0.7563
+        }
+    },
+    "train_samples": 10378,
+    "test_samples": 2595
+}

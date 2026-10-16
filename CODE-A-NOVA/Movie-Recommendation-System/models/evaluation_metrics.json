@@ -1,0 +1,10 @@
+{
+    "SVD_Components": 25,
+    "Explained_Variance_Ratio": 0.3819,
+    "Test_MAE": 2.542,
+    "Test_RMSE": 2.8232,
+    "Total_Users": 610,
+    "Total_Movies_Rated": 9724,
+    "Total_Ratings": 100836,
+    "Matrix_Sparsity_Percent": 98.3
+}
