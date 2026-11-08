@@ -76,6 +76,15 @@ def normalize_score(row):
 
 def load_and_preprocess_data():
     """Load, clean, and standardize the essay dataset."""
+    if os.path.exists(CLEAN_DATA_PATH):
+        print(f"[i] Loading existing clean dataset from {CLEAN_DATA_PATH}...")
+        clean_df = pd.read_csv(CLEAN_DATA_PATH)
+        clean_df = clean_df.dropna(subset=["essay", "normalized_score"]).copy()
+        clean_df["essay"] = clean_df["essay"].astype(str).str.strip()
+        clean_df = clean_df[clean_df["essay"].str.len() > 20].copy()
+        print(f"[+] Loaded {len(clean_df)} valid essays from cache.")
+        return clean_df
+
     download_dataset_if_needed()
     print("[*] Loading raw dataset with ISO-8859-1 encoding...")
     df = pd.read_csv(LOCAL_RAW_PATH, sep="\t", encoding="ISO-8859-1")

@@ -22,92 +22,173 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for modern visual polish
+# Custom CSS for clean, professional software UI
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
 
     html, body, [class*="css"] {
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    
+
+    /* Clean, Professional Header */
     .main-header {
-        background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
-        padding: 2.2rem 2.5rem;
-        border-radius: 18px;
+        background: #1e293b;
+        padding: 1.75rem 2rem;
+        border-radius: 12px;
         color: #ffffff;
         margin-bottom: 2rem;
-        box-shadow: 0 10px 25px -5px rgba(30, 27, 75, 0.35);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid #334155;
     }
     .main-header h1 {
-        color: #ffffff !important;
-        font-weight: 800;
-        font-size: 2.3rem;
-        margin: 0 0 0.5rem 0;
-        letter-spacing: -0.02em;
+        color: #f8fafc !important;
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 0 0 0.4rem 0;
+        letter-spacing: -0.01em;
     }
     .main-header p {
-        color: #c7d2fe;
-        font-size: 1.05rem;
+        color: #94a3b8 !important;
+        font-size: 0.95rem;
         margin: 0;
-        max-width: 800px;
+        max-width: 820px;
+        line-height: 1.5;
     }
 
+    /* Clean Metric Cards */
     .metric-card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 14px;
-        padding: 1.25rem 1.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 10px;
+        padding: 1.15rem 1.3rem;
+        transition: border-color 0.15s ease, background-color 0.15s ease;
     }
     .metric-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        border-color: #64748b;
+        background: #243247;
     }
     .metric-label {
-        font-size: 0.82rem;
+        font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        color: #64748b;
-        font-weight: 700;
-        margin-bottom: 0.3rem;
+        color: #94a3b8 !important;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
     }
     .metric-value {
-        font-size: 1.85rem;
-        font-weight: 800;
-        color: #0f172a;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #f8fafc !important;
     }
     .metric-sub {
         font-size: 0.8rem;
-        color: #94a3b8;
+        color: #64748b !important;
         margin-top: 0.2rem;
     }
 
+    /* Status Badges */
     .score-badge {
         display: inline-block;
-        padding: 0.4rem 1.2rem;
-        border-radius: 9999px;
-        font-weight: 700;
-        font-size: 0.95rem;
+        padding: 0.25rem 0.8rem;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.85rem;
     }
-    .badge-excellent { background-color: #dcfce7; color: #15803d; border: 1px solid #86efac; }
-    .badge-good { background-color: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; }
-    .badge-average { background-color: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
-    .badge-poor { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+    .badge-excellent { background-color: #14532d; color: #86efac; border: 1px solid #166534; }
+    .badge-good { background-color: #1e3a8a; color: #93c5fd; border: 1px solid #1d4ed8; }
+    .badge-average { background-color: #713f12; color: #fde047; border: 1px solid #854d0e; }
+    .badge-poor { background-color: #7f1d1d; color: #fca5a5; border: 1px solid #991b1b; }
 
     .limitation-box {
-        background-color: #fffbeb;
-        border-left: 5px solid #f59e0b;
-        padding: 1.2rem;
-        border-radius: 0 10px 10px 0;
-        margin-top: 1.5rem;
-        color: #92400e;
+        background-color: #1e293b;
+        border-left: 4px solid #f59e0b;
+        padding: 1rem 1.25rem;
+        border-radius: 0 8px 8px 0;
+        margin-top: 1.25rem;
+        color: #cbd5e1;
+        border-top: 1px solid #334155;
+        border-bottom: 1px solid #334155;
+        border-right: 1px solid #334155;
     }
     .limitation-box h4 {
-        margin: 0 0 0.5rem 0;
-        color: #78350f;
+        margin: 0 0 0.4rem 0;
+        color: #f59e0b !important;
+    }
+
+    /* Solid Standard Primary Buttons */
+    div.stButton > button {
+        background: #2563eb !important;
+        border: 1px solid #1d4ed8 !important;
+        border-radius: 8px !important;
+        padding: 0.45rem 1rem !important;
+        transition: background-color 0.15s ease !important;
+        box-shadow: none !important;
+    }
+    div.stButton > button p,
+    div.stButton > button span,
+    div.stButton > button div {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+    }
+    div.stButton > button:hover {
+        background: #1d4ed8 !important;
+        border-color: #1e40af !important;
+    }
+
+    /* Clean Dark Sidebar */
+    [data-testid="stSidebar"] {
+        background: #0f172a !important;
+        border-right: 1px solid #1e293b !important;
+    }
+    [data-testid="stSidebar"] h1, 
+    [data-testid="stSidebar"] h2, 
+    [data-testid="stSidebar"] h3, 
+    [data-testid="stSidebar"] h4 {
+        color: #f8fafc !important;
+        font-weight: 700 !important;
+        font-size: 1.05rem !important;
+    }
+    [data-testid="stSidebar"] p, 
+    [data-testid="stSidebar"] span, 
+    [data-testid="stSidebar"] label {
+        color: #cbd5e1 !important;
+        font-size: 0.9rem !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+    [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+        color: #64748b !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stMetricValue"] {
+        color: #f8fafc !important;
+        font-weight: 700 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stMetricLabel"] {
+        color: #94a3b8 !important;
+        font-weight: 600 !important;
+    }
+    [data-testid="stSidebar"] hr {
+        border-color: #1e293b !important;
+    }
+
+    /* Text Area & Labels */
+    .stTextArea label p {
+        color: #f8fafc !important;
+        font-weight: 600 !important;
+        font-size: 0.95rem !important;
+    }
+    .stCaption, .stCaption p {
+        color: #64748b !important;
+    }
+
+    /* Tabs Visibility */
+    button[data-baseweb="tab"] p {
+        color: #94a3b8 !important;
+        font-weight: 500 !important;
+    }
+    button[data-baseweb="tab"][aria-selected="true"] p {
+        color: #f8fafc !important;
+        font-weight: 700 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -209,13 +290,13 @@ def extract_single_essay_features(text: str):
 def get_grade_and_status(score: float):
     """Map numeric 1.0-10.0 score to letter grades and feedback status."""
     if score >= 8.5:
-        return "A / Exemplary", "Proficient / Advanced", "badge-excellent", "#15803d"
+        return "A / Exemplary", "Proficient / Advanced", "badge-excellent", "#059669"
     elif score >= 7.0:
-        return "B / Good", "Competent / Solid", "badge-good", "#0369a1"
+        return "B / Good", "Competent / Solid", "badge-good", "#0d9488"
     elif score >= 5.0:
-        return "C / Fair", "Developing / Adequate", "badge-average", "#b45309"
+        return "C / Fair", "Developing / Adequate", "badge-average", "#d97706"
     else:
-        return "D-F / Needs Work", "Beginning / Basic", "badge-poor", "#b91c1c"
+        return "D-F / Needs Work", "Beginning / Basic", "badge-poor", "#e11d48"
 
 
 # ---------------------------------------------------------
@@ -455,9 +536,21 @@ with tab_eval:
             "R2_Score": "R² Score",
             "QWK": "Quadratic Weighted Kappa (QWK)"
         }, inplace=True)
-        st.dataframe(eval_df.style.highlight_min(subset=["Mean Absolute Error (MAE)", "Root Mean Squared Error (RMSE)"], color="#dcfce7")
-                                  .highlight_max(subset=["R² Score", "Quadratic Weighted Kappa (QWK)"], color="#dcfce7"),
-                     use_container_width=True)
+        
+        # High-contrast dark styling for best metric values
+        styled_df = (
+            eval_df.style
+            .format("{:.4f}")
+            .highlight_min(
+                subset=["Mean Absolute Error (MAE)", "Root Mean Squared Error (RMSE)"],
+                props="background-color: #14532d; color: #86efac; font-weight: 700;"
+            )
+            .highlight_max(
+                subset=["R² Score", "Quadratic Weighted Kappa (QWK)"],
+                props="background-color: #14532d; color: #86efac; font-weight: 700;"
+            )
+        )
+        st.dataframe(styled_df, use_container_width=True)
         st.caption(f"Winner model: **{metrics.get('best_model')}** with QWK score of **{metrics['models_evaluated'].get(metrics.get('best_model'), {}).get('QWK'):.4f}** (indicates strong agreement with human expert raters).")
     else:
         st.info("Run `python train_model.py` to generate the evaluation benchmark.")

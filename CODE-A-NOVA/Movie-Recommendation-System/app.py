@@ -27,82 +27,153 @@ st.markdown("""
     html, body, [class*="css"] {
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    
+
+    /* Clean, Professional Header */
     .hero-banner {
-        background: linear-gradient(135deg, #090d16 0%, #111827 50%, #1e1b4b 100%);
-        padding: 2.2rem 2.5rem;
-        border-radius: 18px;
+        background: #1e293b;
+        padding: 1.75rem 2rem;
+        border-radius: 12px;
         color: #ffffff;
         margin-bottom: 2rem;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid #334155;
     }
     .hero-banner h1 {
-        color: #ffffff !important;
-        font-weight: 800;
-        font-size: 2.3rem;
-        margin: 0 0 0.5rem 0;
-        letter-spacing: -0.02em;
+        color: #f8fafc !important;
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 0 0 0.4rem 0;
+        letter-spacing: -0.01em;
     }
     .hero-banner p {
-        color: #94a3b8;
-        font-size: 1.05rem;
+        color: #94a3b8 !important;
+        font-size: 0.95rem;
         margin: 0;
         max-width: 820px;
+        line-height: 1.5;
     }
 
+    /* Clean Content Cards */
     .movie-card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 14px;
-        padding: 1.25rem 1.4rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 10px;
+        padding: 1.15rem 1.3rem;
+        margin-bottom: 0.85rem;
+        transition: border-color 0.15s ease, background-color 0.15s ease;
     }
     .movie-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        border-color: #cbd5e1;
+        border-color: #64748b;
+        background: #243247;
     }
 
+    /* Minimalist Badges */
     .badge-rank {
-        background-color: #3b82f6;
-        color: white;
-        padding: 0.25rem 0.65rem;
-        border-radius: 8px;
-        font-weight: 800;
-        font-size: 0.85rem;
+        background-color: #334155;
+        color: #f8fafc !important;
+        padding: 0.2rem 0.55rem;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.8rem;
         display: inline-block;
     }
     .badge-genre {
-        background-color: #f1f5f9;
-        color: #334155;
-        padding: 0.2rem 0.6rem;
-        border-radius: 6px;
+        background-color: #0f172a;
+        color: #94a3b8 !important;
+        border: 1px solid #334155;
+        padding: 0.2rem 0.55rem;
+        border-radius: 4px;
         font-size: 0.75rem;
-        font-weight: 600;
+        font-weight: 500;
         display: inline-block;
-        margin-right: 0.35rem;
-        margin-bottom: 0.25rem;
+        margin-right: 0.3rem;
+        margin-bottom: 0.2rem;
     }
     .badge-match {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        color: white;
-        padding: 0.25rem 0.7rem;
-        border-radius: 9999px;
-        font-size: 0.8rem;
-        font-weight: 700;
+        background-color: #134e4a;
+        color: #5eead4 !important;
+        border: 1px solid #0f766e;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        font-size: 0.78rem;
+        font-weight: 600;
         display: inline-block;
     }
     .badge-rating {
-        background-color: #fef3c7;
-        color: #b45309;
-        padding: 0.25rem 0.6rem;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 0.85rem;
+        background-color: #292524;
+        color: #fde047 !important;
+        border: 1px solid #44403c;
+        padding: 0.2rem 0.55rem;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.78rem;
         display: inline-block;
+    }
+
+    /* Solid Standard Primary Buttons */
+    div.stButton > button {
+        background: #2563eb !important;
+        border: 1px solid #1d4ed8 !important;
+        border-radius: 8px !important;
+        padding: 0.45rem 1rem !important;
+        transition: background-color 0.15s ease !important;
+        box-shadow: none !important;
+    }
+    div.stButton > button p,
+    div.stButton > button span,
+    div.stButton > button div {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+    }
+    div.stButton > button:hover {
+        background: #1d4ed8 !important;
+        border-color: #1e40af !important;
+    }
+
+    /* Clean Dark Sidebar */
+    [data-testid="stSidebar"] {
+        background: #0f172a !important;
+        border-right: 1px solid #1e293b !important;
+    }
+    [data-testid="stSidebar"] h1, 
+    [data-testid="stSidebar"] h2, 
+    [data-testid="stSidebar"] h3, 
+    [data-testid="stSidebar"] h4 {
+        color: #f8fafc !important;
+        font-weight: 700 !important;
+        font-size: 1.05rem !important;
+    }
+    [data-testid="stSidebar"] p, 
+    [data-testid="stSidebar"] span, 
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] [data-baseweb="radio"] label {
+        color: #cbd5e1 !important;
+        font-size: 0.9rem !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+    [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+        color: #64748b !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stMetricValue"] {
+        color: #f8fafc !important;
+        font-weight: 700 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stMetricLabel"] {
+        color: #94a3b8 !important;
+        font-weight: 600 !important;
+    }
+    [data-testid="stSidebar"] hr {
+        border-color: #1e293b !important;
+    }
+
+    /* Clean Tabs */
+    button[data-baseweb="tab"] p {
+        color: #94a3b8 !important;
+        font-weight: 500 !important;
+    }
+    button[data-baseweb="tab"][aria-selected="true"] p {
+        color: #f8fafc !important;
+        font-weight: 700 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -330,18 +401,18 @@ if "Content-Based" in mode or "Collaborative" in mode:
     with col_sel_info:
         genres_badges = " ".join([f"<span class='badge-genre'>{g}</span>" for g in selected_row['genres'].split('|')])
         st.markdown(f"""
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.2rem; margin-bottom: 1.5rem;">
-            <div style="font-size: 0.8rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Selected Movie</div>
-            <div style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0.2rem 0;">{selected_row['clean_title']} <span style="color: #64748b; font-size: 1.1rem;">({selected_row['year'] or 'N/A'})</span></div>
+        <div style="background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.25rem;">
+            <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Selected Baseline Movie</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin: 0.25rem 0;">{selected_row['clean_title']} <span style="color: #94a3b8; font-size: 0.95rem; font-weight: 400;">({selected_row['year'] or 'N/A'})</span></div>
             <div style="margin-top: 0.4rem;">{genres_badges}</div>
         </div>
         """, unsafe_allow_html=True)
     with col_sel_stats:
         st.markdown(f"""
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.2rem; margin-bottom: 1.5rem; text-align: center;">
-            <div style="font-size: 0.8rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Community Rating</div>
-            <div style="font-size: 1.6rem; font-weight: 800; color: #b45309; margin: 0.2rem 0;">★ {selected_row['vote_average']} <span style="font-size: 0.9rem; color: #64748b;">/ 5.0</span></div>
-            <div style="font-size: 0.8rem; color: #64748b;">({selected_row['vote_count']} user ratings)</div>
+        <div style="background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.25rem; text-align: center;">
+            <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Community Rating</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin: 0.2rem 0;"><span style="color: #facc15;">★</span> {selected_row['vote_average']} <span style="font-size: 0.85rem; color: #94a3b8; font-weight: 400;">/ 5.0</span></div>
+            <div style="font-size: 0.8rem; color: #94a3b8;">({selected_row['vote_count']} user ratings)</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -353,7 +424,7 @@ if "Content-Based" in mode or "Collaborative" in mode:
         recommendations = get_collaborative_recommendations(selected_idx, top_n=num_recs)
         strategy_desc = "Collaborative Filtering: Recommended based on latent factor user-rating similarity discovered via TruncatedSVD Matrix Factorization."
 
-    st.markdown(f"### 📋 Ranked Recommendations ({len(recommendations) if recommendations else 0} results)")
+    st.markdown(f"### Ranked Recommendations ({len(recommendations) if recommendations else 0} results)")
     st.caption(strategy_desc)
 
     if recommendations is None:
@@ -366,14 +437,14 @@ if "Content-Based" in mode or "Collaborative" in mode:
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
                     <div>
                         <span class="badge-rank">#{rank}</span>
-                        <span style="font-size: 1.2rem; font-weight: 800; color: #0f172a; margin-left: 0.5rem;">
+                        <span style="font-size: 1.1rem; font-weight: 700; color: #f8fafc; margin-left: 0.5rem;">
                             {item['clean_title']}
                         </span>
-                        <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">({item['year'] or 'N/A'})</span>
+                        <span style="color: #94a3b8; font-size: 0.9rem; font-weight: 400;">({item['year'] or 'N/A'})</span>
                     </div>
                     <div>
                         <span class="badge-match">{item['score_label']}</span>
-                        <span class="badge-rating" style="margin-left: 0.4rem;">★ {item['vote_average']} ({item['vote_count']} votes)</span>
+                        <span class="badge-rating" style="margin-left: 0.4rem;"><span style="color: #facc15;">★</span> {item['vote_average']} ({item['vote_count']} votes)</span>
                     </div>
                 </div>
                 <div style="margin-top: 0.6rem;">{genre_tags}</div>
@@ -382,7 +453,7 @@ if "Content-Based" in mode or "Collaborative" in mode:
 
 else:
     # Top-Rated by Genre mode
-    st.markdown("### 🏆 Top-Rated Movies by Genre (IMDb Formula)")
+    st.markdown("### Top-Rated Movies by Genre (IMDb Formula)")
     selected_genre = st.selectbox("Select a Genre to Explore:", ["All Genres"] + all_genres, index=0)
     min_votes_slider = st.slider("Minimum Number of User Ratings:", min_value=5, max_value=80, value=25, step=5)
 
@@ -396,14 +467,14 @@ else:
             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
                 <div>
                     <span class="badge-rank">#{rank}</span>
-                    <span style="font-size: 1.2rem; font-weight: 800; color: #0f172a; margin-left: 0.5rem;">
+                    <span style="font-size: 1.1rem; font-weight: 700; color: #f8fafc; margin-left: 0.5rem;">
                         {item['clean_title']}
                     </span>
-                    <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">({item['year'] or 'N/A'})</span>
+                    <span style="color: #94a3b8; font-size: 0.9rem; font-weight: 400;">({item['year'] or 'N/A'})</span>
                 </div>
                 <div>
                     <span class="badge-match">{item['score_label']}</span>
-                    <span class="badge-rating" style="margin-left: 0.4rem;">Avg: ★ {item['vote_average']} ({item['vote_count']} votes)</span>
+                    <span class="badge-rating" style="margin-left: 0.4rem;">Avg: <span style="color: #facc15;">★</span> {item['vote_average']} ({item['vote_count']} votes)</span>
                 </div>
             </div>
             <div style="margin-top: 0.6rem;">{genre_tags}</div>

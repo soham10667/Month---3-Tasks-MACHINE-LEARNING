@@ -11,7 +11,7 @@
             "MAE": 1.0281,
             "RMSE": 1.3568,
             "R2_Score": 0.6029,
-            "QWK": 0.7349
+            "QWK": 0.7352
         },
         "Gradient Boosting Regressor": {
             "MAE": 1.0112,

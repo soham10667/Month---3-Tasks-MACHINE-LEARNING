@@ -37,6 +37,7 @@ venv.bak/
 .streamlit/secrets.toml
 
 # IDE and OS files
+.kilo/
 .vscode/
 .idea/
 *.swp
